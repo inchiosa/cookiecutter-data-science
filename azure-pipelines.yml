@@ -36,7 +36,7 @@ jobs:
 
   - script: |
       pip install pytest pytest-azurepipelines
-      pytest --show-capture
+      pytest --show-capture=yes
     displayName: 'pytest'
 
 - job:
@@ -68,7 +68,7 @@ jobs:
 
   - script: |
       pip install pytest pytest-azurepipelines
-      pytest --show-capture
+      pytest --show-capture=yes
     displayName: 'pytest'
 
 - job:
@@ -101,5 +101,5 @@ jobs:
 
   - script: |
       pip install pytest pytest-azurepipelines
-      pytest --show-capture
+      pytest --show-capture=yes
     displayName: 'pytest'
