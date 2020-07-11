@@ -10,7 +10,7 @@ function finish {
         deactivate
     fi
 
-    rmvirtualenv $PROJECT_NAME
+#    rmvirtualenv $PROJECT_NAME
 }
 trap finish EXIT
 
