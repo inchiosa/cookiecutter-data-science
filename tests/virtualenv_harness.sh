@@ -44,8 +44,11 @@ export WORKON_HOME=$TEMP_ENV_ROOT
 #     done
 # fi
 
-echo about to run find virtualenv
-find / -name '*virtualenv*'
+#echo about to run find virtualenv
+#find / -name '*virtualenv*'
+
+echo python is here:
+echo `which python`
 
 source $(which virtualenvwrapper.sh)
 
