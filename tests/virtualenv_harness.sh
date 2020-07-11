@@ -44,6 +44,9 @@ export WORKON_HOME=$TEMP_ENV_ROOT
 #     done
 # fi
 
+echo about to run find virtualenv
+find / -name '*virtualenv*'
+
 source $(which virtualenvwrapper.sh)
 
 make create_environment
