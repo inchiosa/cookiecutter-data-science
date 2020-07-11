@@ -47,9 +47,10 @@ export WORKON_HOME=$TEMP_ENV_ROOT
 # echo about to run ls
 #ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
 
-#echo about to run find virtualenv
+echo about to run find
 #find / -name '*virtualenv*'
 #find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
+find /c -name '*mkvirtualenv*'
 
 echo python is here:
 echo `which python`
