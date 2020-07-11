@@ -45,16 +45,16 @@ export WORKON_HOME=$TEMP_ENV_ROOT
 # fi
 
 # echo about to run ls
-ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
+#ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
 
-echo about to run find virtualenv
+#echo about to run find virtualenv
 #find / -name '*virtualenv*'
-find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
+#find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
 
 echo python is here:
 echo `which python`
 
-source $(which virtualenvwrapper.sh)
+#source $(which virtualenvwrapper.sh)
 
 make create_environment
 
