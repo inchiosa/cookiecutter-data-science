@@ -66,7 +66,7 @@ make create_environment
 echo Path:
 echo $PATH
 
-/c/Miniconda/Scripts/workon $PROJECT_NAME
+/c/Miniconda/Scripts/workon.bat $PROJECT_NAME
 
 make requirements
 
