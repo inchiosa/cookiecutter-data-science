@@ -44,13 +44,14 @@ export WORKON_HOME=$TEMP_ENV_ROOT
 #     done
 # fi
 
-# echo about to run ls
+echo about to run ls
 #ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
+ls -l /c/Miniconda/Scripts
 
-echo about to run find
+#echo about to run find
 #find / -name '*virtualenv*'
 #find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
-find /c -name '*mkvirtualenv*'
+#find /c -name '*mkvirtualenv*'
 
 echo python is here:
 echo `which python`
