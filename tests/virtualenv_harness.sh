@@ -61,7 +61,13 @@ echo `which python`
 make create_environment
 
 # workon not sourced
-. $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
+#. $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
+
+echo Path:
+echo $PATH
+
+/c/Miniconda/Scripts/workon $PROJECT_NAME
+
 make requirements
 
 run_tests $PROJECT_NAME
