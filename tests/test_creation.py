@@ -156,7 +156,6 @@ def verify_makefile_commands(root, config):
         encoding = "utf-8"
     print("encoding:")
     print(encoding)
-    #encoding = "utf-8"                     
 
     # normally hidden by pytest except in failure we want this displayed
     print("\n======================= STDOUT ======================")
@@ -166,6 +165,7 @@ def verify_makefile_commands(root, config):
     if encoding is None:
         print("encoding was none")
         encoding = "utf-8"
+    print("encoding:")
     print(encoding)
 
     print("\n======================= STDERR ======================")
