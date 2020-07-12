@@ -102,7 +102,14 @@ make create_environment
 
 # workon not sourced
 #. $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
-. /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo/Scripts/activate
+
+if [ -e $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate ]
+then
+    . $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
+else
+    . $TEMP_ENV_ROOT/$PROJECT_NAME/Scripts/activate
+    #. /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo/Scripts/activate
+fi
 
 echo Path:
 echo $PATH
