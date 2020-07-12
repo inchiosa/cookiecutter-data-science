@@ -98,7 +98,10 @@ echo Machine is ${machine}
 #     source $(which virtualenvwrapper.sh)
 # fi
 
-if [ ! -z `which virtualenvwrapper.sh` ]; then source `which virtualenvwrapper.sh`;
+if [ ! -z `which virtualenvwrapper.sh` ]
+then
+    source `which virtualenvwrapper.sh`
+fi
 
 make create_environment
 
