@@ -57,6 +57,9 @@ echo about to run find
 #find /c -name '*mkvirtualenv*'
 find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo
 
+echo ls lR find my-test-repo
+ls -lR `find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo`
+
 echo python is here:
 echo `which python`
 
