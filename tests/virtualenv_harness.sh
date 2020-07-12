@@ -32,15 +32,6 @@ fi
 TEMP_ENV_ROOT=$(mktemp -d "${TMPDIR:-/tmp/}$(basename $0).XXXXXXXXXXXX")
 export WORKON_HOME=$TEMP_ENV_ROOT
 
-echo TMPDIR is
-echo $TMPDIR
-
-echo TEMP_ENV_ROOT is
-echo $TEMP_ENV_ROOT
-
-echo WORKON_HOME is
-echo $WORKON_HOME
-
 # virtualenvwrapper.sh must be on the PATH on the test host machine,
 # which should be the case if virtualenvwrapper is pip installed in
 # the base Python
@@ -62,42 +53,6 @@ echo $WORKON_HOME
 #     done
 # fi
 
-#echo about to run ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
-#ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
-#ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
-
-#echo about to run ls -l /c/Miniconda/Scripts
-#ls -l /c/Miniconda/Scripts
-
-#echo about to run find
-#find / -name '*virtualenv*'
-#find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
-#find /c -name '*mkvirtualenv*'
-#find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo
-
-#echo ls lR find my-test-repo
-#ls -lR `find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo`
-
-echo python is here:
-echo `which python`
-
-#source $(which virtualenvwrapper.sh)
-unameOut="$(uname -s)"
-case "${unameOut}" in
-    Linux*)     machine=Linux;;
-    Darwin*)    machine=Mac;;
-    CYGWIN*)    machine=Cygwin;;
-    MINGW*)     machine=MinGw;;
-    *)          machine="UNKNOWN:${unameOut}"
-esac
-echo Machine is ${machine}
-
-# if [ $machine = Linux ]
-# then
-#     echo machine is Linux so I will source the .sh
-#     source $(which virtualenvwrapper.sh)
-# fi
-
 if [ ! -z `which virtualenvwrapper.sh` ]
 then
     source `which virtualenvwrapper.sh`
@@ -106,7 +61,6 @@ fi
 make create_environment
 
 # workon not sourced
-#. $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
 
 if [ -e $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate ]
 then
