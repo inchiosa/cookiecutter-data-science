@@ -22,6 +22,7 @@ source $CCDS_ROOT/test_functions.sh
 
 # navigate to the generated project and run make commands 
 cd $1
+sudo chown -R $USER:$USER /usr/local/miniconda
 make create_environment
 conda activate $PROJECT_NAME
 make requirements
