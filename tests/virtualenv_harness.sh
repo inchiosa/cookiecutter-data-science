@@ -62,27 +62,30 @@ echo $WORKON_HOME
 #     done
 # fi
 
-echo about to run ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
-ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
+#echo about to run ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
+#ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
 #ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
 
-echo about to run ls -l /c/Miniconda/Scripts
-ls -l /c/Miniconda/Scripts
+#echo about to run ls -l /c/Miniconda/Scripts
+#ls -l /c/Miniconda/Scripts
 
-echo about to run find
+#echo about to run find
 #find / -name '*virtualenv*'
 #find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
 #find /c -name '*mkvirtualenv*'
-find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo
+#find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo
 
-echo ls lR find my-test-repo
-ls -lR `find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo`
+#echo ls lR find my-test-repo
+#ls -lR `find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo`
 
 echo python is here:
 echo `which python`
 
 #source $(which virtualenvwrapper.sh)
-wrapper_path=$(which virtualenvwrapper.sh) && source $wrapper_path
+if [ source $(which virtualenvwrapper.sh) ]
+then
+    echo virtualenvwrapper.sh sourced
+fi
 
 make create_environment
 
@@ -97,8 +100,8 @@ echo $PATH
 
 make requirements
 
-echo ls lR virtualenv_harness.sh my-test-repo
-ls -lR /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo
+#echo ls lR virtualenv_harness.sh my-test-repo
+#ls -lR /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo
 
 run_tests $PROJECT_NAME
 
