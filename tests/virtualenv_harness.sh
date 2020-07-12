@@ -10,10 +10,9 @@ function finish {
         deactivate
     fi
 
-    if [ ! -z `which rmvirtualenv` ]
-    then
+    if [ ! -z `which rmvirtualenv` ]; then
         rmvirtualenv $PROJECT_NAME
-    else
+    elif [ ! -z `which rmvirtualenv.bat` ]; then
         rmvirtualenv.bat $PROJECT_NAME
     fi
 }
