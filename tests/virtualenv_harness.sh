@@ -69,11 +69,12 @@ make create_environment
 
 # workon not sourced
 #. $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
+. /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo/Scripts/activate
 
 echo Path:
 echo $PATH
 
-/c/Miniconda/Scripts/workon.bat $PROJECT_NAME
+# /c/Miniconda/Scripts/workon.bat $PROJECT_NAME
 
 make requirements
 
