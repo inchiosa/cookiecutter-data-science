@@ -82,9 +82,20 @@ echo python is here:
 echo `which python`
 
 #source $(which virtualenvwrapper.sh)
-if [ source $(which virtualenvwrapper.sh) ]
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo Machine is ${machine}
+
+if [ $machine = Linux ]
 then
-    echo virtualenvwrapper.sh sourced
+    echo machine is Linux so I will source the .sh
+    source $(which virtualenvwrapper.sh)
 fi
 
 make create_environment
