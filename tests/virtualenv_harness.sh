@@ -51,10 +51,11 @@ ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
 echo about to run ls -l /c/Miniconda/Scripts
 ls -l /c/Miniconda/Scripts
 
-#echo about to run find
+echo about to run find
 #find / -name '*virtualenv*'
 #find /c/hostedtoolcache/windows/Python/3.7.8/x64 -name '*virtualenv*'
 #find /c -name '*mkvirtualenv*'
+find /c/Users/VssAdministrator/AppData/Local/Temp -name my-test-repo
 
 echo python is here:
 echo `which python`
