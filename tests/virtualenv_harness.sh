@@ -91,3 +91,5 @@ echo ls lR virtualenv_harness.sh my-test-repo
 ls -lR /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo
 
 run_tests $PROJECT_NAME
+
+exit 98
