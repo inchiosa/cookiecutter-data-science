@@ -92,11 +92,13 @@ case "${unameOut}" in
 esac
 echo Machine is ${machine}
 
-if [ $machine = Linux ]
-then
-    echo machine is Linux so I will source the .sh
-    source $(which virtualenvwrapper.sh)
-fi
+# if [ $machine = Linux ]
+# then
+#     echo machine is Linux so I will source the .sh
+#     source $(which virtualenvwrapper.sh)
+# fi
+
+if [ ! -z `which virtualenvwrapper.sh` ]; then source `which virtualenvwrapper.sh`;
 
 make create_environment
 
@@ -108,20 +110,8 @@ then
     . $TEMP_ENV_ROOT/$PROJECT_NAME/bin/activate
 else
     . $TEMP_ENV_ROOT/$PROJECT_NAME/Scripts/activate
-    #. /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo/Scripts/activate
 fi
-
-echo Path:
-echo $PATH
-
-# /c/Miniconda/Scripts/workon.bat $PROJECT_NAME
 
 make requirements
 
-#echo ls lR virtualenv_harness.sh my-test-repo
-#ls -lR /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-test-repo
-
 run_tests $PROJECT_NAME
-
-# for debugging
-#exit 98
