@@ -20,6 +20,15 @@ source $CCDS_ROOT/test_functions.sh
 # navigate to the generated project and run make commands
 cd $1
 
+if [ -z $TMPDIR ]
+then
+    windowstmpdir=/c/Users/VssAdministrator/AppData/Local/Temp
+    if [ -e $windowstmpdir ]
+    then
+        export TMPDIR=$windowstmpdir
+    fi
+fi
+
 TEMP_ENV_ROOT=$(mktemp -d "${TMPDIR:-/tmp/}$(basename $0).XXXXXXXXXXXX")
 export WORKON_HOME=$TEMP_ENV_ROOT
 
@@ -73,6 +82,7 @@ echo python is here:
 echo `which python`
 
 #source $(which virtualenvwrapper.sh)
+wrapper_path=$(which virtualenvwrapper.sh) && source $wrapper_path
 
 make create_environment
 
