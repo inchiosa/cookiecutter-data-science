@@ -92,4 +92,5 @@ ls -lR /c/Users/VssAdministrator/AppData/Local/Temp/virtualenv_harness.sh.*/my-t
 
 run_tests $PROJECT_NAME
 
-exit 98
+# for debugging
+#exit 98
