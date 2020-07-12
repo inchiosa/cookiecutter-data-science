@@ -44,8 +44,11 @@ export WORKON_HOME=$TEMP_ENV_ROOT
 #     done
 # fi
 
-echo about to run ls
+echo about to run ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
+ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64/
 #ls -lR /c/hostedtoolcache/windows/Python/3.7.8/x64 | grep virtualenv
+
+echo about to run ls -l /c/Miniconda/Scripts
 ls -l /c/Miniconda/Scripts
 
 #echo about to run find
