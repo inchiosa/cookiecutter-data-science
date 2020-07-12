@@ -23,6 +23,15 @@ cd $1
 TEMP_ENV_ROOT=$(mktemp -d "${TMPDIR:-/tmp/}$(basename $0).XXXXXXXXXXXX")
 export WORKON_HOME=$TEMP_ENV_ROOT
 
+echo TMPDIR is
+echo $TMPDIR
+
+echo TEMP_ENV_ROOT is
+echo $TEMP_ENV_ROOT
+
+echo WORKON_HOME is
+echo $WORKON_HOME
+
 # virtualenvwrapper.sh must be on the PATH on the test host machine,
 # which should be the case if virtualenvwrapper is pip installed in
 # the base Python
